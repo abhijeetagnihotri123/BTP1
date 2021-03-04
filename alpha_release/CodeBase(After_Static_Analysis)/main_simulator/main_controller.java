@@ -91,7 +91,7 @@ public class main_controller extends DECODE_INSTRUCTION
         I_hits = D_hits = 0;
         while(IP<num_actual_lines)
         {   
-            if(Iob.cache_hit(Iob.head,IP,p,5))
+            if(Iob.cache_hit(Iob.head,IP,p,num_actual_lines))
             {
                 CPI++;
                 I_hits++;
@@ -119,7 +119,7 @@ public class main_controller extends DECODE_INSTRUCTION
                             CPI = CPI+3;
                             //some calculations to be done here
                         }
-                        if(Iob.cache_hit(Iob.head,IP+1,p,5))
+                        if(Iob.cache_hit(Iob.head,IP+1,p,num_actual_lines))
                         {
                             CPI++;
                             I_hits++;
@@ -160,7 +160,7 @@ public class main_controller extends DECODE_INSTRUCTION
                             CPI = CPI+3;
                             //some calculations to be done here
                         }
-                        if(Iob.cache_hit(Iob.head,IP+1,p,5))
+                        if(Iob.cache_hit(Iob.head,IP+1,p,num_actual_lines))
                         {   
                             CPI++;
                             I_hits++;
@@ -193,7 +193,7 @@ public class main_controller extends DECODE_INSTRUCTION
             {
                 will_branch = LDR(Iob.head.ins[IP],register);
                 String temp[] = Iob.head.ins[IP];
-                if(Iob.cache_hit(Iob.head, IP+1, Iob.head.ins, 5))
+                if(Iob.cache_hit(Iob.head, IP+1, Iob.head.ins, num_actual_lines))
                 {   
                     CPI++;
                     I_hits++;
@@ -246,7 +246,7 @@ public class main_controller extends DECODE_INSTRUCTION
             {
                 will_branch = STR(Iob.head.ins[IP],register);
                 String temp[] = Iob.head.ins[IP];
-                if(Iob.cache_hit(Iob.head, IP+1, Iob.head.ins, 5))
+                if(Iob.cache_hit(Iob.head, IP+1, Iob.head.ins, num_actual_lines))
                 {
                     CPI++;
                     I_hits++;

@@ -110,7 +110,7 @@ public class EXECUTE_INSTRUCTION {
         }
         n1 = extract_number(r1);
         n2 = extract_number(r2);
-        boolean flag = Dob.cache_hit(Dob.head, register[n2][0], register[n1], 10);
+        boolean flag = Dob.cache_hit(Dob.head, register[n2][0], register[n1], 100);
         register[c][0] = Dob.head.arr[register[n2][0]];
         return flag;
     }
@@ -149,7 +149,7 @@ public class EXECUTE_INSTRUCTION {
         n = extract_number(r2);
         a = register[n][0];
         n = extract_number(r1);
-        boolean flag = Dob.cache_hit(Dob.head, a, register[n], 10);
+        boolean flag = Dob.cache_hit(Dob.head, a, register[n], 100);
         Dob.head.arr[a] = c;
         return flag;
     }
