@@ -48,7 +48,12 @@ public class test_application  {
             }   
         }
         else
-        {
+        {   
+
+        Runtime runtime = Runtime.getRuntime();
+        runtime.gc();
+        long memory = runtime.totalMemory() - runtime.freeMemory();
+        System.out.println("Used memory is bytes: " + memory);
             return;
         }
     }
