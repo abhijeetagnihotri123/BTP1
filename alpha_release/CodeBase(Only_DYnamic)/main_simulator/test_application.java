@@ -4,47 +4,49 @@ public class test_application  {
     
     public static void main(String args[])
     {
-        System.out.println("This is a test application for testing the embedded application");
-        System.out.println("Through the command line enter your choice and file name");
-        System.out.println("Also after this you can write your results in a file and also delete a file");
         int ch = Integer.parseInt(args[0]);
+        boolean mode = false; // this is kept for this code base so as to deal with fall through without getting any exception
+                              // will not be needing this in case of proper migitated code
         switch(ch)
         {   
             case 1:
                 main_controller ob = new main_controller(false);
                 ob.execute(args[1]);    
+                mode = true;
             case 2:
                 Beta_update ob1 = new Beta_update();
-                ob1.print_pattern();
+                ob1.print_val(args,mode);
             default:
                 break;
         }
-        ch = Integer.parseInt(args[2]);
-        if(ch == 1)
+        if(mode)
         {
-            ch = Integer.parseInt(args[3]);
-            switch(ch)
+            ch = Integer.parseInt(args[2]);
+            if(ch == 1 && mode)
             {
-                case 1:
-                    File f = new File(args[1]);
-                    if(f.exists())
-                    {
-                        f.delete();
-                    }
-                    break;
-                default:
-                    String command = "rm ";
-                    command = command+" "+args[1];
-                    try
-                    {
-                        Runtime.getRuntime().exec(command);
-                    }
-                    catch(Exception e)
-                    {
-                        //LOGGER.log("context", e);
-                    }
-                    break;
-            
+                ch = Integer.parseInt(args[3]);
+                switch(ch)
+                {
+                    case 1:
+                        File f = new File(args[1]);
+                        if(f.exists())
+                        {
+                            f.delete();
+                        }
+                        break;
+                    default:
+                        String command = "rm ";
+                        command = command+" "+args[1];
+                        try
+                        {
+                            Runtime.getRuntime().exec(command);
+                        }
+                        catch(Exception e)
+                        {
+                            e.printStackTrace();
+                        }
+                        break;
+                }
             }   
         }
         else

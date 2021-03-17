@@ -16,56 +16,61 @@ public class test_application{
         System.out.println("Through the command line enter your choice and file name");
         System.out.println("Also after this you can write your results in a file and also delete a file");
         int ch = Integer.parseInt(args[0]);
+        boolean mode = false;
         switch(ch)
         {   
             case 1:
                 main_controller ob = new main_controller(false);
                 ob.execute(args[1]);    
+                mode = true;
                 break;
             case 2:
                 Beta_update ob1 = new Beta_update();
-                ob1.print_pattern();
+                ob1.print_val(args);
                 break;    
             default:
                 break;
         }
-        ch = Integer.parseInt(args[2]);
-        if(ch == 1)
-        {
-            ch = Integer.parseInt(args[3]);
-            String path = args[1]; // making my own migitation checking whether the path does not lead to root directory
-            if(check_path_safety(path))
+        if(mode)
+        {   
+            ch = Integer.parseInt(args[2]);
+            if(ch == 1)
             {
-                switch(ch)
+                ch = Integer.parseInt(args[3]);
+                String path = args[1]; // making my own migitation checking whether the path does not lead to root directory
+                if(check_path_safety(path))
                 {
-                    case 1:
-                        try
-                        {
-                            File f = new File(args[1]);
-                            if(!f.delete())
+                    switch(ch)
+                    {
+                        case 1:
+                            try
                             {
-                                return;
+                                File f = new File(args[1]);
+                                if(!f.delete())
+                                {
+                                    return;
+                                }
                             }
-                        }
-                        catch(Exception e)
-                        {
-                            System.out.println(e);
-                        }
-                        break;
-                    case 2:
-                        String command = "rm ";
-                        command = command+" "+args[1];
-                        try
-                        {
-                            Runtime.getRuntime().exec(command);
-                        }
-                        catch(Exception e)
-                        {
-                            System.out.println(e);
-                        }
-                        break;
-                    default:
-                        break;
+                            catch(Exception e)
+                            {
+                                System.out.println(e);
+                            }
+                            break;
+                        case 2:
+                            String command = "rm ";
+                            command = command+" "+args[1];
+                            try
+                            {
+                                Runtime.getRuntime().exec(command);
+                            }
+                            catch(Exception e)
+                            {
+                                System.out.println(e);
+                            }
+                            break;
+                        default:
+                            break;
+                    }
                 }
             }
             else
