@@ -1,3 +1,4 @@
+
 class CalcNode
 {
     float coeff;
@@ -150,8 +151,12 @@ public class find_value {
         }
     }
     static float find_power(float a,int n)
-    {
-        if(a == 1.0 || n == 0 || n == 1)
+    {   
+        if(n == 0)
+        {
+            return 1;
+        }
+        if(a == 1.0 || n == 1)
         {
             return a;
         }

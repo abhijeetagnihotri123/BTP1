@@ -1,3 +1,4 @@
+
 class PNODE
 {
     float coeff;
@@ -172,7 +173,10 @@ public class INTEGRATE {
     // public static void main(String args[])
     // {
     //     INTEGRATE p = new INTEGRATE();
-    //     String str = "1.3+1.0x^1+2.1x^2-2.25x^3";
-    //     System.out.println(Integrate(p, str,3));
+    //     find_value op = new find_value();
+    //     String str = "2x";//"1.3+1.0x^1+2.1x^2-2.25x^3";
+    //     String s = Integrate(p, str,3);
+    //     System.out.println(s);
+    //     System.out.println(op.FIND_VALUE(op,s,3));
     // } 
 }
