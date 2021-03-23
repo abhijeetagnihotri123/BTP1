@@ -1,18 +1,30 @@
 package com.javatechie.StringPalindrome;
-public class add_polynomials{
-    Node L;
+class AddNode
+{
+    float coeff;
+    int power;
+    AddNode next;
+    AddNode(float coeff,int power)
+    {
+        this.coeff = coeff;
+        this.power = power;
+        this.next = null;
+    }
+}
+public class add_polynomials {
+    AddNode L;
     add_polynomials()
     {   
         try
         {
-            L = new Node(-1,-1);
+            L = new AddNode(-1,-1);
         }
         catch(NullPointerException e)
         {
             //e.printStackTrace();
         }
     }
-    static String Display(Node np)
+    static String Display(AddNode np)
     {   
         String s = "";
         if(np.coeff < 0)
@@ -38,12 +50,12 @@ public class add_polynomials{
         }
         return s;
     }
-    static void insert_term(Node L,int power,float coeff)
+    static void insert_term(AddNode L,int power,float coeff)
     {   
-        Node ptr = null;
+        AddNode ptr = null;
         try
         {
-            ptr = new Node(coeff,power);
+            ptr = new AddNode(coeff,power);
         }
         catch(NullPointerException e)
         {
@@ -55,7 +67,7 @@ public class add_polynomials{
         }
         else
         {
-            Node start = L;
+            AddNode start = L;
             while(start.next != null && start.next.power < power)
             {
                 start = start.next;
@@ -75,7 +87,7 @@ public class add_polynomials{
             }
         }
     } 
-    static void parse_expression(Node L,String s)
+    static void parse_expression(AddNode L,String s)
     {
         int i = 0;
         int n;

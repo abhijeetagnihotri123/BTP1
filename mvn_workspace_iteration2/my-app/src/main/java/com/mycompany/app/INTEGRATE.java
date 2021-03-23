@@ -1,18 +1,30 @@
 package com.javatechie.StringPalindrome;
+class PNODE
+{
+    float coeff;
+    int power;
+    PNODE next;
+    PNODE(float coeff,int power)
+    {
+        this.coeff = coeff;
+        this.power = power;
+        this.next = null;
+    }
+}
 public class INTEGRATE {
-    Node L;
+    PNODE L;
     INTEGRATE()
     {   
         try
         {
-            L = new Node(-1,-1);
+            L = new PNODE(-1,-1);
         }
         catch(NullPointerException e)
         {
             //e.printStackTrace();
         }
     }
-    static String Display(Node np)
+    static String Display(PNODE np)
     {   
         String s = "";
         if(np.coeff < 0)
@@ -38,12 +50,12 @@ public class INTEGRATE {
         }
         return s;
     }
-    static void insert_term(Node L,int power,float coeff)
+    static void insert_term(PNODE L,int power,float coeff)
     {   
-        Node ptr = null;// = new Node(coeff,power);
+        PNODE ptr = null;// = new PNODE(coeff,power);
         try
         {
-            ptr = new Node(coeff,power);
+            ptr = new PNODE(coeff,power);
         }
         catch(NullPointerException e)
         {
@@ -55,7 +67,7 @@ public class INTEGRATE {
         }
         else
         {
-            Node start = L;
+            PNODE start = L;
             while(start.next != null && start.next.power < power)
             {
                 start = start.next;
@@ -75,7 +87,7 @@ public class INTEGRATE {
             }
         }
     } 
-    static void parse_expression(Node L,String s)
+    static void parse_expression(PNODE L,String s)
     {
         int i = 0;
         int n;
@@ -139,10 +151,10 @@ public class INTEGRATE {
             }
         }
     }
-    static void PRIMITIVE(Node L,float constant)
+    static void PRIMITIVE(PNODE L,float constant)
     {
-        Node head = L.next;
-        Node tmp = new Node(constant,0);
+        PNODE head = L.next;
+        PNODE tmp = new PNODE(constant,0);
         L.next = tmp;
         tmp.next = head;
         while(head != null)

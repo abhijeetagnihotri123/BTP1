@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.javatechie.StringPalindrome.AppTest" time="0.084" tests="6" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.javatechie.StringPalindrome.AppTest" time="0.072" tests="6" errors="0" skipped="0" failures="0">
   <properties>
     <property name="sun.desktop" value="gnome"/>
     <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
@@ -16,7 +16,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="GB"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-11-openjdk-amd64/lib"/>
-    <property name="sun.java.command" value="/home/markfirmware/Desktop/BTP/pipeline_simulator/BTP1/mvn_workspace_iteration3/my-app/target/surefire/surefirebooter14557611696877821421.jar /home/markfirmware/Desktop/BTP/pipeline_simulator/BTP1/mvn_workspace_iteration3/my-app/target/surefire 2021-03-23T10-57-40_081-jvmRun1 surefire11249739186745850329tmp surefire_014404853493266716882tmp"/>
+    <property name="sun.java.command" value="/home/markfirmware/Desktop/BTP/pipeline_simulator/BTP1/mvn_workspace_iteration3/my-app/target/surefire/surefirebooter15732246455278521972.jar /home/markfirmware/Desktop/BTP/pipeline_simulator/BTP1/mvn_workspace_iteration3/my-app/target/surefire 2021-03-23T11-38-45_144-jvmRun1 surefire7611017282641749946tmp surefire_015761649844030670893tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/home/markfirmware/Desktop/BTP/pipeline_simulator/BTP1/mvn_workspace_iteration3/my-app/target/test-classes:/home/markfirmware/Desktop/BTP/pipeline_simulator/BTP1/mvn_workspace_iteration3/my-app/target/classes:/home/markfirmware/.m2/repository/junit/junit/4.11/junit-4.11.jar:/home/markfirmware/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -32,7 +32,7 @@
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="/home/markfirmware/Desktop/BTP/pipeline_simulator/BTP1/mvn_workspace_iteration3/my-app/target/surefire/surefirebooter14557611696877821421.jar"/>
+    <property name="surefire.real.class.path" value="/home/markfirmware/Desktop/BTP/pipeline_simulator/BTP1/mvn_workspace_iteration3/my-app/target/surefire/surefirebooter15732246455278521972.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="11.0.10+9-Ubuntu-0ubuntu1.20.04"/>
     <property name="user.name" value="markfirmware"/>
@@ -57,10 +57,10 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="55.0"/>
   </properties>
-  <testcase name="embedded_code" classname="com.javatechie.StringPalindrome.AppTest" time="0.001"/>
+  <testcase name="embedded_code" classname="com.javatechie.StringPalindrome.AppTest" time="0.002"/>
   <testcase name="polynomial1" classname="com.javatechie.StringPalindrome.AppTest" time="0"/>
   <testcase name="polynomial2" classname="com.javatechie.StringPalindrome.AppTest" time="0"/>
-  <testcase name="polynomial3" classname="com.javatechie.StringPalindrome.AppTest" time="0"/>
+  <testcase name="polynomial3" classname="com.javatechie.StringPalindrome.AppTest" time="0.001"/>
   <testcase name="polynomial4" classname="com.javatechie.StringPalindrome.AppTest" time="0"/>
   <testcase name="polynomial5" classname="com.javatechie.StringPalindrome.AppTest" time="0"/>
 </testsuite>

@@ -1,18 +1,30 @@
 package com.javatechie.StringPalindrome;
+class CalcNode
+{
+    float coeff;
+    int power;
+    CalcNode next;
+    CalcNode(float coeff,int power)
+    {
+        this.coeff = coeff;
+        this.power = power;
+        this.next = null;
+    }
+}
 public class find_value {
-    Node L;
+    CalcNode L;
     find_value()
-    {   
+    {
         try
         {
-            L = new Node(-1,-1);
+            L = new CalcNode(-1,-1);
         }
         catch(NullPointerException e)
         {
             //e.printStackTrace();
         }
     }
-    static void Display(Node np)
+    static void Display(CalcNode np)
     {   
         if(np.coeff < 0)
         {
@@ -37,12 +49,12 @@ public class find_value {
         }
         System.out.println();
     }
-    static void insert_term(Node L,int power,float coeff)
+    static void insert_term(CalcNode L,int power,float coeff)
     {   
-        Node ptr = null;
+        CalcNode ptr = null;
         try
         {
-            ptr = new Node(coeff,power);
+            ptr = new CalcNode(coeff,power);
         }
         catch(NullPointerException e)
         {
@@ -54,7 +66,7 @@ public class find_value {
         }
         else
         {
-            Node start = L;
+            CalcNode start = L;
             while(start.next != null && start.next.power < power)
             {
                 start = start.next;
@@ -74,7 +86,7 @@ public class find_value {
             }
         }
     } 
-    static void parse_expression(Node L,String s)
+    static void parse_expression(CalcNode L,String s)
     {
         int i = 0;
         int n;
@@ -160,7 +172,7 @@ public class find_value {
             return a*find_power(a*a, n>>1);
         }
     }
-    static float VALUE(Node head,float x)
+    static float VALUE(CalcNode head,float x)
     {
         float term;
         float value = 0;

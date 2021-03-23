@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.javatechie.StringPalindrome.AppTest" time="0.072" tests="6" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.javatechie.StringPalindrome.AppTest" time="0.073" tests="6" errors="0" skipped="0" failures="0">
   <properties>
     <property name="sun.desktop" value="gnome"/>
     <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
     <property name="java.specification.version" value="11"/>
     <property name="sun.cpu.isalist" value=""/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
-    <property name="java.class.path" value="/home/markfirmware/Desktop/mvn_workspace/my-app/target/test-classes:/home/markfirmware/Desktop/mvn_workspace/my-app/target/classes:/home/markfirmware/.m2/repository/junit/junit/4.11/junit-4.11.jar:/home/markfirmware/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:"/>
+    <property name="java.class.path" value="/home/markfirmware/Desktop/BTP/pipeline_simulator/BTP1/mvn_workspace_iteration6/my-app/target/test-classes:/home/markfirmware/Desktop/BTP/pipeline_simulator/BTP1/mvn_workspace_iteration6/my-app/target/classes:/home/markfirmware/.m2/repository/junit/junit/4.11/junit-4.11.jar:/home/markfirmware/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:"/>
     <property name="java.vm.vendor" value="Ubuntu"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.vendor.url" value="https://ubuntu.com/"/>
@@ -16,9 +16,9 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="GB"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-11-openjdk-amd64/lib"/>
-    <property name="sun.java.command" value="/home/markfirmware/Desktop/mvn_workspace/my-app/target/surefire/surefirebooter12493524409165388133.jar /home/markfirmware/Desktop/mvn_workspace/my-app/target/surefire 2021-03-22T23-36-07_645-jvmRun1 surefire12252245385872346518tmp surefire_05698043252310854386tmp"/>
+    <property name="sun.java.command" value="/home/markfirmware/Desktop/BTP/pipeline_simulator/BTP1/mvn_workspace_iteration6/my-app/target/surefire/surefirebooter18182887794493761447.jar /home/markfirmware/Desktop/BTP/pipeline_simulator/BTP1/mvn_workspace_iteration6/my-app/target/surefire 2021-03-23T11-42-26_631-jvmRun1 surefire17028434586326362564tmp surefire_010196171539671782724tmp"/>
     <property name="jdk.debug" value="release"/>
-    <property name="surefire.test.class.path" value="/home/markfirmware/Desktop/mvn_workspace/my-app/target/test-classes:/home/markfirmware/Desktop/mvn_workspace/my-app/target/classes:/home/markfirmware/.m2/repository/junit/junit/4.11/junit-4.11.jar:/home/markfirmware/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:"/>
+    <property name="surefire.test.class.path" value="/home/markfirmware/Desktop/BTP/pipeline_simulator/BTP1/mvn_workspace_iteration6/my-app/target/test-classes:/home/markfirmware/Desktop/BTP/pipeline_simulator/BTP1/mvn_workspace_iteration6/my-app/target/classes:/home/markfirmware/.m2/repository/junit/junit/4.11/junit-4.11.jar:/home/markfirmware/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="/home/markfirmware"/>
     <property name="user.language" value="en"/>
@@ -26,13 +26,13 @@
     <property name="java.version.date" value="2021-01-19"/>
     <property name="java.home" value="/usr/lib/jvm/java-11-openjdk-amd64"/>
     <property name="file.separator" value="/"/>
-    <property name="basedir" value="/home/markfirmware/Desktop/mvn_workspace/my-app"/>
+    <property name="basedir" value="/home/markfirmware/Desktop/BTP/pipeline_simulator/BTP1/mvn_workspace_iteration6/my-app"/>
     <property name="java.vm.compressedOopsMode" value="32-bit"/>
     <property name="line.separator" value="&#10;"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="/home/markfirmware/Desktop/mvn_workspace/my-app/target/surefire/surefirebooter12493524409165388133.jar"/>
+    <property name="surefire.real.class.path" value="/home/markfirmware/Desktop/BTP/pipeline_simulator/BTP1/mvn_workspace_iteration6/my-app/target/surefire/surefirebooter18182887794493761447.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="11.0.10+9-Ubuntu-0ubuntu1.20.04"/>
     <property name="user.name" value="markfirmware"/>
@@ -45,7 +45,7 @@
     <property name="java.vendor.url.bug" value="https://bugs.launchpad.net/ubuntu/+source/openjdk-lts"/>
     <property name="java.io.tmpdir" value="/tmp"/>
     <property name="java.version" value="11.0.10"/>
-    <property name="user.dir" value="/home/markfirmware/Desktop/mvn_workspace/my-app"/>
+    <property name="user.dir" value="/home/markfirmware/Desktop/BTP/pipeline_simulator/BTP1/mvn_workspace_iteration6/my-app"/>
     <property name="os.arch" value="amd64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="java.awt.printerjob" value="sun.print.PSPrinterJob"/>
@@ -61,6 +61,6 @@
   <testcase name="polynomial1" classname="com.javatechie.StringPalindrome.AppTest" time="0"/>
   <testcase name="polynomial2" classname="com.javatechie.StringPalindrome.AppTest" time="0"/>
   <testcase name="polynomial3" classname="com.javatechie.StringPalindrome.AppTest" time="0"/>
-  <testcase name="polynomial4" classname="com.javatechie.StringPalindrome.AppTest" time="0.001"/>
+  <testcase name="polynomial4" classname="com.javatechie.StringPalindrome.AppTest" time="0"/>
   <testcase name="polynomial5" classname="com.javatechie.StringPalindrome.AppTest" time="0"/>
 </testsuite>

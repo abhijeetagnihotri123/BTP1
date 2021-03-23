@@ -1,18 +1,30 @@
 package com.javatechie.StringPalindrome;
-public class subtract_polynomial{
-    Node L;
+class SubNode
+{
+    float coeff;
+    int power;
+    SubNode next;
+    SubNode(float coeff,int power)
+    {
+        this.coeff = coeff;
+        this.power = power;
+        this.next = null;
+    }
+}
+public class subtract_polynomial {
+    SubNode L;
     subtract_polynomial()
     {   
         try
         {
-            L = new Node(-1,-1);
+            L = new SubNode(-1,-1);
         }
         catch(NullPointerException e)
         {
             //e.printStackTrace();
         }
     }
-    static String Display(Node np)
+    static String Display(SubNode np)
     {   
         String s = "";
         if(np.coeff < 0)
@@ -38,12 +50,12 @@ public class subtract_polynomial{
         }
         return s;
     }
-    static void insert_term(Node L,int power,float coeff)
+    static void insert_term(SubNode L,int power,float coeff)
     {   
-        Node ptr = null;//
+        SubNode ptr = null;//
         try
         {
-            ptr = new Node(coeff,power);
+            ptr = new SubNode(coeff,power);
         }
         catch(NullPointerException e)
         {
@@ -55,7 +67,7 @@ public class subtract_polynomial{
         }
         else
         {
-            Node start = L;
+            SubNode start = L;
             while(start.next != null && start.next.power < power)
             {
                 start = start.next;
@@ -75,7 +87,7 @@ public class subtract_polynomial{
             }
         }
     } 
-    static void parse_expression(Node L,String s,boolean mode)
+    static void parse_expression(SubNode L,String s,boolean mode)
     {
         int i = 0;
         int n;

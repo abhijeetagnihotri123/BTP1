@@ -1,18 +1,30 @@
 package com.javatechie.StringPalindrome;
+class MulNode
+{
+    float coeff;
+    int power;
+    MulNode next;
+    MulNode(float coeff,int power)
+    {
+        this.coeff = coeff;
+        this.power = power;
+        this.next = null;
+    }
+}
 public class multiply_polynomial {
-    Node L;
+    MulNode L;
     multiply_polynomial()
     {   
         try
         {
-            L = new Node(-1,-1);
+            L = new MulNode(-1,-1);
         }
         catch(NullPointerException e)
         {
             //e.printStackTrace();
         }
     }
-    static String Display(Node np)
+    static String Display(MulNode np)
     {   
         String s = "";
         if(np.coeff < 0)
@@ -38,12 +50,12 @@ public class multiply_polynomial {
         }
         return s;
     }
-    static void insert_term(Node L,int power,float coeff)
+    static void insert_term(MulNode L,int power,float coeff)
     {   
-        Node ptr = null;//= new Node(coeff,power);
+        MulNode ptr = null;//= new MulNode(coeff,power);
         try
         {
-            ptr = new Node(coeff, power);
+            ptr = new MulNode(coeff, power);
         }
         catch(NullPointerException e)
         {
@@ -55,7 +67,7 @@ public class multiply_polynomial {
         }
         else
         {
-            Node start = L;
+            MulNode start = L;
             while(start.next != null && start.next.power < power)
             {
                 start = start.next;
@@ -75,7 +87,7 @@ public class multiply_polynomial {
             }
         }
     } 
-    static void parse_expression(Node L,String s,boolean mode)
+    static void parse_expression(MulNode L,String s,boolean mode)
     {
         int i = 0;
         int n;
@@ -143,11 +155,11 @@ public class multiply_polynomial {
     static multiply_polynomial multiply(multiply_polynomial p,multiply_polynomial q)
     {
         multiply_polynomial r = new multiply_polynomial();
-        Node h1 = p.L.next;
+        MulNode h1 = p.L.next;
         int c = 0;
         while(h1 != null)
         {   
-            Node h2 = q.L.next;
+            MulNode h2 = q.L.next;
             while(h2 != null)
             {   
                 insert_term(r.L, h1.power+h2.power, h1.coeff*h2.coeff);

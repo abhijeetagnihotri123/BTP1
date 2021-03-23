@@ -1,18 +1,30 @@
 package com.javatechie.StringPalindrome;
+class DERNODE
+{
+    float coeff;
+    int power;
+    DERNODE next;
+    DERNODE(float coeff,int power)
+    {
+        this.coeff = coeff;
+        this.power = power;
+        this.next = null;
+    }
+}
 public class DERIVATIVE {
-    Node L;
+    DERNODE L;
     DERIVATIVE()
-    {   
+    {
         try
         {
-            L = new Node(-1,-1);
+            L = new DERNODE(-1,-1);
         }
         catch(NullPointerException e)
         {
             //e.printStackTrace();
         }
     }
-    static String Display(Node np)
+    static String Display(DERNODE np)
     {   
         String s = "";
         if(np.coeff < 0)
@@ -38,12 +50,12 @@ public class DERIVATIVE {
         }
         return s;
     }
-    static void insert_term(Node L,int power,float coeff)
+    static void insert_term(DERNODE L,int power,float coeff)
     {   
-        Node ptr = null;// = new Node(coeff,power);
+        DERNODE ptr = null;// = new DERNODE(coeff,power);
         try
         {
-            ptr = new Node(coeff,power);
+            ptr = new DERNODE(coeff,power);
         }
         catch(NullPointerException e)
         {
@@ -55,7 +67,7 @@ public class DERIVATIVE {
         }
         else
         {
-            Node start = L;
+            DERNODE start = L;
             while(start.next != null && start.next.power < power)
             {
                 start = start.next;
@@ -75,7 +87,7 @@ public class DERIVATIVE {
             }
         }
     } 
-    static void parse_expression(Node L,String s)
+    static void parse_expression(DERNODE L,String s)
     {
         int i = 0;
         int n;
@@ -139,9 +151,9 @@ public class DERIVATIVE {
             }
         }
     }
-    static void Differentialte(Node L)
+    static void Differentialte(DERNODE L)
     {   
-        Node head = L.next;
+        DERNODE head = L.next;
         if(head == null)
         {
             System.out.println("There is nothing left to differentiate");
@@ -149,7 +161,7 @@ public class DERIVATIVE {
         }
         if(head.power == 0)
         {   
-            Node tmp = head;
+            DERNODE tmp = head;
             head = head.next;
             L.next = head;
             tmp.next = null;

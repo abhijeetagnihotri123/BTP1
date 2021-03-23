@@ -51,15 +51,6 @@ public class parse_assembly {
                 String str = "mov r0 #0;mov r2 #100;mov r3 #1;mov r4 #0;b :;str [r5#r4] r3;add r3 r3 #1;add r4 r4 #1;sub r2 r2 #1;cmp r2 #0;bne b;mov r2 #100;mov r3 #1;mov r4 #0;c :;ldr [r5#r4] r3;add r0 r0 r3;add r4 r4 #1;sub r2 r2 #1;cmp r2 #0;bne c;.AA r5 100";
                 int num_lines=0;
                 int i;
-                // do
-                // {
-                //     i = fin.read();
-                //     if(i != -1)
-                //     {
-                //         char ch = (char)i;
-                //         str += ch;
-                //     }
-                // }while(i != -1);
                 StringTokenizer st = new StringTokenizer(str,";");
                 num_lines = st.countTokens();
                 String p1[][] = new String[num_lines][]; // p is an acronym for the assembly program
