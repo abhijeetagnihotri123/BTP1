@@ -8,7 +8,7 @@ com/javatechie/StringPalindrome/DERIVATIVE.class
 com/javatechie/StringPalindrome/multiply_polynomial.class
 com/javatechie/StringPalindrome/Node.class
 com/javatechie/StringPalindrome/D_CACHE.class
-com/javatechie/StringPalindrome/polynomial.class
+com/javatechie/StringPalindrome/CNode.class
 com/javatechie/StringPalindrome/DNode.class
 com/javatechie/StringPalindrome/App.class
 com/javatechie/StringPalindrome/test_application.class

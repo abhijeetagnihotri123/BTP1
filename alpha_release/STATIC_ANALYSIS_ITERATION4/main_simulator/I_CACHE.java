@@ -1,18 +1,3 @@
-// class INode
-// {
-//     int BA;
-//     int LA;
-//     String [][] ins;
-//     INode next;
-//     INode prev;
-//     INode(int BA,int LA,String [][] ins)
-//     {
-//         this.BA = BA;
-//         this.LA = LA;
-//         this.ins = ins;
-//         this.next = this.prev = null;
-//     }
-// }
 public class I_CACHE 
 {    
     static int capacity;

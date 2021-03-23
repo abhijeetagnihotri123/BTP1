@@ -1,25 +1,21 @@
 package com.javatechie.StringPalindrome;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.util.Scanner;
-import java.util.StringTokenizer;
 class INode
-{
-    int BA;
-    int LA;
-    String [][] ins;
-    INode next;
-    INode prev;
-    INode(int BA,int LA,String [][] ins)
     {
-        this.BA = BA;
-        this.LA = LA;
-        this.ins = ins;
-        this.next = this.prev = null;
+        int BA;
+        int LA;
+        String [][] ins;
+        INode next;
+        INode prev;
+        INode(int BA,int LA,String [][] ins)
+        {
+            this.BA = BA;
+            this.LA = LA;
+            this.ins = ins;
+            this.next = this.prev = null;
+        }
     }
-}
 public class I_CACHE 
-{    
+{   
     static int capacity;
     static int num_nodes;
     static INode head,rear,newptr;
@@ -34,26 +30,6 @@ public class I_CACHE
     static int getCapacity()
     {
         return capacity;
-    }
-    public static void display(INode np)
-    {   
-        while(np != null)
-        {
-            System.out.print("("+np.BA+" "+np.LA+" "+num_nodes+")\n");
-            int i = np.BA;
-            int n = np.LA;
-            while(i<n)
-            {
-                for(String y : np.ins[i])
-                {
-                    System.out.print(y+" ");
-                }
-                i++;
-                System.out.println();
-            }
-            np = np.next;
-        }
-        System.out.println("==================");
     }
     public static INode find(INode np,int data,String arr[][])
     {

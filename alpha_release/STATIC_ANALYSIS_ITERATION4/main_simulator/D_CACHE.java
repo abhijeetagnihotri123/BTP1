@@ -1,19 +1,3 @@
-// class DNode
-// {
-//     int BA;
-//     int LA;
-//     DNode next;
-//     DNode prev;
-//     int [][]arr;
-//     DNode(int BA,int LA,int arr[][])
-//     {
-//         this.BA = BA;
-//         this.LA = LA;
-//         this.arr = arr;
-//         this.next = null;
-//         this.prev = null;
-//     }
-// }
 public class D_CACHE 
 {    
     static int capacity;

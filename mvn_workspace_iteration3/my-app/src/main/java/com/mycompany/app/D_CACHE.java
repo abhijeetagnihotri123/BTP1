@@ -1,5 +1,4 @@
 package com.javatechie.StringPalindrome;
-import java.util.*;
 class DNode
 {
     int BA;
