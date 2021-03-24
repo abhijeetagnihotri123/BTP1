@@ -2,5 +2,5 @@ projectKey=TUTORIAL_POM
 serverUrl=http://localhost:9000
 serverVersion=7.7.0.23042
 dashboardUrl=http://localhost:9000/dashboard?id=TUTORIAL_POM
-ceTaskId=AXhdYZJ7eocGOnCL8uFR
-ceTaskUrl=http://localhost:9000/api/ce/task?id=AXhdYZJ7eocGOnCL8uFR
+ceTaskId=AXhlDG0r2zJ1NokpBJUb
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AXhlDG0r2zJ1NokpBJUb
